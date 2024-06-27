@@ -1,0 +1,35 @@
+@mixin font($fontName, $fontUrl) {
+    @font-face {
+        font-family: $fontName;
+        src: url($fontUrl);
+    }
+}
+
+@include font('roboto', './fonts/Roboto-Light.ttf');
+
+
+@mixin input ($width, $height) {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $blue;
+    width: $width;
+    height: $height;
+    padding-left: 10px;
+    font-family: 'roboto';
+    font-size: 18px;
+}
+
+@mixin button($width, $height) {
+    min-width: $width;
+    height: $height;
+    border: none;
+    background: $blue;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
