@@ -1,0 +1,146 @@
+.reg {
+    @include font();
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .reg-content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        // @media (max-width: 950px) {
+        //     width: 100%;
+        // }
+
+        // @media (max-width: 450px) {
+        //     width: 100%;
+        // }
+
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 30%;
+        border: 1px solid #5176D6;
+        padding: 20px;
+        background-color: #1F2934;
+        border-radius: 10px;
+
+        @media (max-width: 950px) {
+            width: 50%;
+        }
+
+        @media (max-width: 750px) {
+            width: 60%;
+        }
+
+        @media (max-width: 600px) {
+            width: 70%;
+        }
+
+        @media (max-width: 500px) {
+            width: 90%;
+        }
+
+        .form-img {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .form-gen {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+                height: 30px;
+                border: 1px solid #5176D6;
+                border-radius: 2px;
+                color: #9196A5;
+                background: none;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            img {
+                width: 150px;
+                border-radius: 50%;
+            }
+        }
+
+        .form-inp {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+
+            input {
+                width: 90%;
+                height: 30px;
+                border: none;
+                background: none;
+                outline: none;
+                border-bottom: 1px solid #5176D6;
+                padding-left: 10px;
+                padding-right: 20px;
+                color: #fff;
+                font-size: 16px;
+            }
+
+            .inp-txt {
+                color: #9196A5;
+            }
+        }
+
+        .form-check {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: #fff;
+            font-size: 12px;
+
+            .checkbox {
+                display: block;
+                width: 20px;
+                height: 20px;
+                border: 1px solid #5176D6;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+            .sog {
+                color: #5176D6;
+                cursor: pointer;
+            }
+        }
+
+        button {
+            width: 50%;
+            height: 30px;
+            border: 1px solid #5176D6;
+            border-radius: 2px;
+            color: #9196A5;
+            background: none;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 0 5px #5176D6;
+        }
+
+        .form-sign {
+            display: flex;
+            gap: 5px;
+            color: #fff;
+
+            .sign {
+                cursor: pointer;
+                color: #5176D6;
+            }
+        }
+    }
+}

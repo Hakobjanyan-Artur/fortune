@@ -81,7 +81,7 @@
             .remember {
                 display: flex;
                 gap: 10px;
-                align-items: center;
+                color: #fff;
 
                 .checkbox {
                     display: flex;
@@ -89,13 +89,16 @@
                     height: 17px;
                     border: 1px solid #5176D6;
                     border-radius: 50%;
+                    align-items: center;
+                    cursor: pointer;
+
                 }
             }
 
 
-            .member-txt,
             .sign-txt {
-                color: #fff
+                color: #fff;
+                cursor: pointer;
             }
 
             button {
@@ -107,7 +110,24 @@
                 background: none;
                 font-size: 16px;
                 cursor: pointer;
+                box-shadow: 0 0 5px #5176D6;
             }
+        }
+
+        .guest {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 70%;
+            height: 30px;
+            border: 1px solid #5176D6;
+            border-radius: 2px;
+            color: #9196A5;
+            background: none;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 0 5px #5176D6;
         }
     }
 }

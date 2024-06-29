@@ -1,14 +1,24 @@
 import man from '../../images/man.webp'
+import back from '../../images/csinoBackground.jpg'
 import { GrHide } from "react-icons/gr";
 import { BiShow } from "react-icons/bi";
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
     const [hide, setHide] = useState(false)
     const [check, setCheck] = useState(false)
 
+    const navigate = useNavigate()
+
     return (
-        <div className="login">
+        <div
+            style={{
+                background: `url(${back})`,
+                backgroundPosition: 'center',
+                WebkitBackgroundSize: 'cover',
+            }}
+            className="login">
             <div className="form-content">
                 <form>
                     <div className="form-contet-img">
@@ -38,7 +48,7 @@ export default function Login() {
                     <div className="remember">
                         <span
                             style={{
-                                backgroundColor: check ? '#9196A5' : ''
+                                backgroundColor: check ? '#5176D6' : ''
                             }}
                             onClick={() => setCheck(!check)}
                             className='checkbox'></span>
@@ -46,8 +56,11 @@ export default function Login() {
                     </div>
                     <button>Войти</button>
                     <div className="sign-up">
-                        <span className="sign-txt">Зарегестрироваться</span>
+                        <span
+                            onClick={() => navigate('reg')}
+                            className="sign-txt">Зарегестрироваться</span>
                     </div>
+                    <span className='guest'>Попробовать как Гость</span>
                 </form>
             </div>
         </div>

@@ -174,7 +174,7 @@ img {
 .login .form-content form .remember {
   display: flex;
   gap: 10px;
-  align-items: center;
+  color: #fff;
 }
 .login .form-content form .remember .checkbox {
   display: flex;
@@ -182,10 +182,12 @@ img {
   height: 17px;
   border: 1px solid #5176D6;
   border-radius: 50%;
+  align-items: center;
+  cursor: pointer;
 }
-.login .form-content form .member-txt,
 .login .form-content form .sign-txt {
   color: #fff;
+  cursor: pointer;
 }
 .login .form-content form button {
   width: 50%;
@@ -196,4 +198,148 @@ img {
   background: none;
   font-size: 16px;
   cursor: pointer;
+  box-shadow: 0 0 5px #5176D6;
+}
+.login .form-content .guest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 70%;
+  height: 30px;
+  border: 1px solid #5176D6;
+  border-radius: 2px;
+  color: #9196A5;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 5px #5176D6;
+}
+
+.reg {
+  font-family: "roboto";
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reg .reg-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reg form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 30%;
+  border: 1px solid #5176D6;
+  padding: 20px;
+  background-color: #1F2934;
+  border-radius: 10px;
+}
+@media (max-width: 950px) {
+  .reg form {
+    width: 50%;
+  }
+}
+@media (max-width: 750px) {
+  .reg form {
+    width: 60%;
+  }
+}
+@media (max-width: 600px) {
+  .reg form {
+    width: 70%;
+  }
+}
+@media (max-width: 500px) {
+  .reg form {
+    width: 90%;
+  }
+}
+.reg form .form-img {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.reg form .form-img .form-gen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 30px;
+  border: 1px solid #5176D6;
+  border-radius: 2px;
+  color: #9196A5;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+.reg form .form-img img {
+  width: 150px;
+  border-radius: 50%;
+}
+.reg form .form-inp {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.reg form .form-inp input {
+  width: 90%;
+  height: 30px;
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: 1px solid #5176D6;
+  padding-left: 10px;
+  padding-right: 20px;
+  color: #fff;
+  font-size: 16px;
+}
+.reg form .form-inp .inp-txt {
+  color: #9196A5;
+}
+.reg form .form-check {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  font-size: 12px;
+}
+.reg form .form-check .checkbox {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #5176D6;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.reg form .form-check .sog {
+  color: #5176D6;
+  cursor: pointer;
+}
+.reg form button {
+  width: 50%;
+  height: 30px;
+  border: 1px solid #5176D6;
+  border-radius: 2px;
+  color: #9196A5;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 5px #5176D6;
+}
+.reg form .form-sign {
+  display: flex;
+  gap: 5px;
+  color: #fff;
+}
+.reg form .form-sign .sign {
+  cursor: pointer;
+  color: #5176D6;
 }/*# sourceMappingURL=App.css.map */
