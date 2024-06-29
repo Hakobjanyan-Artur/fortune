@@ -1,0 +1,113 @@
+.login {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include font();
+
+    .form-content {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 450px) {
+            width: 100%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 40%;
+            border: 1px solid #5176D6;
+            padding: 20px;
+            background-color: #1F2934;
+            border-radius: 10px;
+
+            @media (max-width: 450px) {
+                width: 80%;
+            }
+
+            .form-contet-img {
+                img {
+                    width: 150px;
+                    border-radius: 50%;
+                }
+            }
+
+            .form-inp {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                align-items: center;
+
+                input {
+                    width: 90%;
+                    height: 30px;
+                    border: none;
+                    background: none;
+                    outline: none;
+                    border-bottom: 1px solid #5176D6;
+                    padding-left: 10px;
+                    padding-right: 20px;
+                    color: #fff;
+                    font-size: 16px;
+                }
+
+                .form-inp-pass {
+                    width: 100%;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+
+                    .pass-hide {
+                        position: absolute;
+                        top: 5px;
+                        right: 20px;
+                        cursor: pointer;
+                        color: #fff;
+                        font-size: 18px;
+                    }
+                }
+
+                .inp-txt {
+                    color: #9196A5;
+                }
+            }
+
+            .remember {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                .checkbox {
+                    display: flex;
+                    width: 17px;
+                    height: 17px;
+                    border: 1px solid #5176D6;
+                    border-radius: 50%;
+                }
+            }
+
+
+            .member-txt,
+            .sign-txt {
+                color: #fff
+            }
+
+            button {
+                width: 50%;
+                height: 30px;
+                border: 1px solid #5176D6;
+                border-radius: 2px;
+                color: #9196A5;
+                background: none;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+    }
+}

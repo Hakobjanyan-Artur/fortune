@@ -1,11 +1,11 @@
-@mixin font($fontName, $fontUrl) {
-    @font-face {
-        font-family: $fontName;
-        src: url($fontUrl);
-    }
+@font-face {
+    font-family: 'roboto';
+    src: url('./fonts/Roboto-Light.ttf');
 }
 
-@include font('roboto', './fonts/Roboto-Light.ttf');
+@mixin font() {
+    font-family: 'roboto';
+}
 
 
 @mixin input ($width, $height) {

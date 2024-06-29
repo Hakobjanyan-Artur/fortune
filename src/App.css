@@ -22,7 +22,178 @@ img {
   margin: 0 auto;
 }
 
+.App {
+  background: rgb(79, 96, 112);
+  background: linear-gradient(90deg, rgb(25, 40, 54) 100%, rgb(79, 96, 112) 0%);
+  min-height: 100vh;
+}
+
 @font-face {
   font-family: "roboto";
   src: url("./fonts/Roboto-Light.ttf");
+}
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #5176D6;
+  font-family: "roboto";
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+}
+.navbar .container .navbar-coins {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.navbar .container .navbar-coins img {
+  width: 100px;
+}
+.navbar .container .navbar-coins .coin-count {
+  position: absolute;
+  top: 35%;
+  color: yellow;
+}
+.navbar .container .navbar-spiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.navbar .container .navbar-spiner .nav-spiner-img {
+  padding-top: 5px;
+  width: 100px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.navbar .container .navbar-spiner .nav-spin-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 180px;
+}
+.navbar .container .navbar-spiner .nav-spin-info .nav-s-txt {
+  font-size: 12px;
+}
+.navbar .container .navbar-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navbar .container .navbar-user .nav-us-img {
+  width: 60px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.login {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "roboto";
+}
+.login .form-content {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 450px) {
+  .login .form-content {
+    width: 100%;
+  }
+}
+.login .form-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 40%;
+  border: 1px solid #5176D6;
+  padding: 20px;
+  background-color: #1F2934;
+  border-radius: 10px;
+}
+@media (max-width: 450px) {
+  .login .form-content form {
+    width: 80%;
+  }
+}
+.login .form-content form .form-contet-img img {
+  width: 150px;
+  border-radius: 50%;
+}
+.login .form-content form .form-inp {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+.login .form-content form .form-inp input {
+  width: 90%;
+  height: 30px;
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: 1px solid #5176D6;
+  padding-left: 10px;
+  padding-right: 20px;
+  color: #fff;
+  font-size: 16px;
+}
+.login .form-content form .form-inp .form-inp-pass {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.login .form-content form .form-inp .form-inp-pass .pass-hide {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+}
+.login .form-content form .form-inp .inp-txt {
+  color: #9196A5;
+}
+.login .form-content form .remember {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.login .form-content form .remember .checkbox {
+  display: flex;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #5176D6;
+  border-radius: 50%;
+}
+.login .form-content form .member-txt,
+.login .form-content form .sign-txt {
+  color: #fff;
+}
+.login .form-content form button {
+  width: 50%;
+  height: 30px;
+  border: 1px solid #5176D6;
+  border-radius: 2px;
+  color: #9196A5;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
 }/*# sourceMappingURL=App.css.map */
