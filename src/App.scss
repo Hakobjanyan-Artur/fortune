@@ -23,12 +23,6 @@ img {
     margin: 0 auto;
 }
 
-.App {
-    background: rgb(79, 96, 112);
-    background: linear-gradient(90deg, rgba(25, 40, 54, 1) 100%, rgba(79, 96, 112, 1) 0%);
-    min-height: 100vh;
-}
-
 
 @import './scss/variables';
 @import './scss/_mixin';

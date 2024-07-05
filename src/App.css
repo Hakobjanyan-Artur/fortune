@@ -22,324 +22,255 @@ img {
   margin: 0 auto;
 }
 
-.App {
-  background: rgb(79, 96, 112);
-  background: linear-gradient(90deg, rgb(25, 40, 54) 100%, rgb(79, 96, 112) 0%);
-  min-height: 100vh;
-}
-
 @font-face {
   font-family: "roboto";
   src: url("./fonts/Roboto-Light.ttf");
 }
 .navbar {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #5176D6;
   font-family: "roboto";
 }
-.navbar .container {
+.navbar .container .nav-link {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: #fff;
 }
-.navbar .container .navbar-coins {
-  width: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.navbar .container .nav-link .logo {
+  max-width: 100px;
   cursor: pointer;
+}
+.navbar .container .nav-link .search-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.navbar .container .nav-link .search-form form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.navbar .container .nav-link .search-form form .nav-form-inp {
+  width: 50%;
   position: relative;
 }
-.navbar .container .navbar-coins img {
-  width: 100px;
-}
-.navbar .container .navbar-coins .coin-count {
+.navbar .container .nav-link .search-form form .nav-form-inp .nav-form-close {
   position: absolute;
-  top: 35%;
-  color: yellow;
-}
-.navbar .container .navbar-spiner {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-}
-.navbar .container .navbar-spiner .nav-spiner-img {
-  padding-top: 5px;
-  width: 100px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 25px;
+  height: 25px;
+  background: #000;
+  transform: translateX(-15px);
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  font-size: 20px;
   cursor: pointer;
+  color: #fff;
 }
-.navbar .container .navbar-spiner .nav-spin-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  width: 180px;
+.navbar .container .nav-link .search-form form .nav-form-inp input {
+  width: 100%;
+  height: 25px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  background: none;
+  font-size: 14px;
+  padding-left: 18px;
+  outline: none;
 }
-.navbar .container .navbar-spiner .nav-spin-info .nav-s-txt {
-  font-size: 12px;
-}
-.navbar .container .navbar-user {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.navbar .container .navbar-user .nav-us-img {
-  width: 60px;
-  border-radius: 20px;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.login {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "roboto";
-}
-.login .form-content {
-  width: 70%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media (max-width: 450px) {
-  .login .form-content {
-    width: 100%;
-  }
-}
-.login .form-content form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  width: 40%;
-  border: 1px solid #5176D6;
-  padding: 20px;
-  background-color: #1F2934;
-  border-radius: 10px;
-}
-@media (max-width: 450px) {
-  .login .form-content form {
+@media (max-width: 750px) {
+  .navbar .container .nav-link .search-form form .nav-form-inp {
     width: 80%;
   }
 }
-.login .form-content form .form-contet-img img {
-  width: 150px;
-  border-radius: 50%;
-}
-.login .form-content form .form-inp {
+.navbar .container .nav-link .sign-search {
+  width: 15%;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
   align-items: center;
+  justify-content: space-between;
 }
-.login .form-content form .form-inp input {
-  width: 90%;
-  height: 30px;
-  border: none;
+@media (max-width: 850px) {
+  .navbar .container .nav-link .sign-search {
+    width: 30%;
+  }
+}
+@media (max-width: 450px) {
+  .navbar .container .nav-link .sign-search {
+    width: 40%;
+  }
+}
+.navbar .container .nav-link .sign-search .nav-sign-btn {
+  padding: 2px 8px 2px 8px;
+  border: 1px solid #000;
+  border-radius: 3px;
   background: none;
-  outline: none;
-  border-bottom: 1px solid #5176D6;
-  padding-left: 10px;
-  padding-right: 20px;
-  color: #fff;
-  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
 }
-.login .form-content form .form-inp .form-inp-pass {
-  width: 100%;
+.navbar .container .nav-link .sign-search .nav-basket {
   position: relative;
-  display: flex;
-  justify-content: center;
 }
-.login .form-content form .form-inp .form-inp-pass .pass-hide {
+.navbar .container .nav-link .sign-search .nav-basket .nav-b-count {
   position: absolute;
-  top: 5px;
-  right: 20px;
-  cursor: pointer;
-  color: #fff;
-  font-size: 18px;
-}
-.login .form-content form .form-inp .inp-txt {
-  color: #9196A5;
-}
-.login .form-content form .remember {
+  width: 18px;
+  height: 18px;
   display: flex;
-  gap: 10px;
-  color: #fff;
-}
-.login .form-content form .remember .checkbox {
-  display: flex;
-  width: 17px;
-  height: 17px;
-  border: 1px solid #5176D6;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  align-items: center;
-  cursor: pointer;
-}
-.login .form-content form .sign-txt {
+  background-color: red;
   color: #fff;
+  top: -15px;
+  right: -8px;
+}
+.navbar .container .nav-link .sign-search .nav-sign-btn:hover {
+  color: gray;
+  border: 1px solid gray;
+}
+.navbar .container .nav-link .sign-search .nav-icon {
+  font-size: 20px;
   cursor: pointer;
 }
-.login .form-content form button {
-  width: 50%;
-  height: 30px;
-  border: 1px solid #5176D6;
-  border-radius: 2px;
-  color: #9196A5;
-  background: none;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0 0 5px #5176D6;
-}
-.login .form-content .guest {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 70%;
-  height: 30px;
-  border: 1px solid #5176D6;
-  border-radius: 2px;
-  color: #9196A5;
-  background: none;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0 0 5px #5176D6;
-}
-
-.reg {
-  font-family: "roboto";
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.reg .reg-content {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.reg form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  width: 30%;
-  border: 1px solid #5176D6;
-  padding: 20px;
-  background-color: #1F2934;
-  border-radius: 10px;
-}
-@media (max-width: 950px) {
-  .reg form {
-    width: 50%;
-  }
-}
-@media (max-width: 750px) {
-  .reg form {
-    width: 60%;
-  }
-}
-@media (max-width: 600px) {
-  .reg form {
-    width: 70%;
-  }
-}
-@media (max-width: 500px) {
-  .reg form {
-    width: 90%;
-  }
-}
-.reg form .form-img {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.reg form .form-img .form-gen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  height: 30px;
-  border: 1px solid #5176D6;
-  border-radius: 2px;
-  color: #9196A5;
-  background: none;
-  font-size: 16px;
-  cursor: pointer;
-}
-.reg form .form-img img {
-  width: 150px;
-  border-radius: 50%;
-}
-.reg form .form-inp {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-}
-.reg form .form-inp input {
-  width: 90%;
-  height: 30px;
-  border: none;
-  background: none;
-  outline: none;
-  border-bottom: 1px solid #5176D6;
-  padding-left: 10px;
-  padding-right: 20px;
-  color: #fff;
-  font-size: 16px;
-}
-.reg form .form-inp .inp-txt {
-  color: #9196A5;
-}
-.reg form .form-check {
-  width: 100%;
+.navbar .container .links {
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  color: #fff;
-  font-size: 12px;
 }
-.reg form .form-check .checkbox {
-  display: block;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #5176D6;
-  border-radius: 50%;
-  cursor: pointer;
+@media (max-width: 450px) {
+  .navbar .container .links {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
 }
-.reg form .form-check .sog {
-  color: #5176D6;
-  cursor: pointer;
+.navbar .container .links .default {
+  color: #000;
+  padding: 2px 5px 2px 5px;
+  transition: 0.3s;
 }
-.reg form button {
-  width: 50%;
-  height: 30px;
-  border: 1px solid #5176D6;
-  border-radius: 2px;
-  color: #9196A5;
-  background: none;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0 0 5px #5176D6;
+.navbar .container .links .default:hover {
+  color: gray;
+  border: 1px solid gray;
+  border-radius: 3px;
 }
-.reg form .form-sign {
+.navbar .container .links .click {
+  color: gray;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 2px 5px 2px 5px;
+}
+
+.login {
+  height: 100vh;
+  font-family: "roboto";
+}
+.login .login-content {
+  width: 100%;
+  height: 100%;
   display: flex;
-  gap: 5px;
-  color: #fff;
+  justify-content: center;
+  align-items: center;
 }
-.reg form .form-sign .sign {
+.login .login-content .login-form {
+  display: flex;
+  gap: 10px;
+  box-shadow: 0 0 10px #000;
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 400px;
+}
+@media (max-width: 700px) {
+  .login .login-content .login-form {
+    width: 90%;
+    flex-direction: column;
+    min-height: 600px;
+  }
+}
+.login .login-content .login-form .login-form-left {
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 700px) {
+  .login .login-content .login-form .login-form-left {
+    max-width: 100%;
+  }
+}
+.login .login-content .login-form .login-from-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0 30px 0;
+}
+@media (max-width: 700px) {
+  .login .login-content .login-form .login-from-right {
+    width: 100%;
+  }
+}
+.login .login-content .login-form .login-from-right form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+}
+.login .login-content .login-form .login-from-right form .form-inp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+.login .login-content .login-form .login-from-right form .form-inp .inp-pass {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.login .login-content .login-form .login-from-right form .form-inp .inp-pass .icon-pass {
+  position: absolute;
+  right: 10%;
+  top: 3px;
+  font-size: 18px;
   cursor: pointer;
-  color: #5176D6;
+}
+.login .login-content .login-form .login-from-right form .form-inp input {
+  width: 70%;
+  height: 25px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  background: none;
+  outline: none;
+  padding-left: 10px;
+  font-size: 14px;
+}
+.login .login-content .login-form .login-from-right form .form-inp-pass {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.login .login-content .login-form .login-from-right form .form-inp-pass:hover {
+  color: gray;
+}
+.login .login-content .login-form .login-from-right form button {
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.login .login-content .login-form .login-from-right form button:hover {
+  border: 1px solid grey;
+  color: gray;
+}
+.login .login-content .login-form .login-from-right .login-reg {
+  color: red;
+  cursor: pointer;
 }/*# sourceMappingURL=App.css.map */

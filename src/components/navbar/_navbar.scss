@@ -1,75 +1,148 @@
 .navbar {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #5176D6;
     @include font();
 
     .container {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        color: #fff;
-
-        .navbar-coins {
-            width: 100px;
+        .nav-link {
             display: flex;
-            flex-direction: column;
+            justify-content: space-around;
             align-items: center;
-            cursor: pointer;
-            position: relative;
 
-            img {
-                width: 100px;
-            }
-
-            .coin-count {
-                position: absolute;
-                top: 35%;
-                color: yellow;
-            }
-        }
-
-        .navbar-spiner {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-
-            .nav-spiner-img {
-                padding-top: 5px;
-                width: 100px;
-                overflow: hidden;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+            .logo {
+                max-width: 100px;
                 cursor: pointer;
             }
 
-            .nav-spin-info {
+            .search-form {
+                width: 100%;
                 display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 5px;
-                width: 180px;
+                justify-content: center;
 
-                .nav-s-txt {
-                    font-size: 12px;
+                form {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+
+                    .nav-form-inp {
+                        width: 50%;
+                        position: relative;
+
+                        .nav-form-close {
+                            position: absolute;
+                            display: flex;
+                            width: 25px;
+                            height: 25px;
+                            background: #000;
+                            transform: translateX(-15px);
+                            border-top-left-radius: 3px;
+                            border-bottom-left-radius: 3px;
+                            font-size: 20px;
+                            cursor: pointer;
+                            color: #fff;
+                        }
+
+                        input {
+                            width: 100%;
+                            height: 25px;
+                            border: 1px solid #000;
+                            border-radius: 3px;
+                            background: none;
+                            font-size: 14px;
+                            padding-left: 18px;
+                            outline: none;
+                        }
+
+                        @media(max-width: 750px) {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+
+            .sign-search {
+                width: 15%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                @media (max-width: 850px) {
+                    width: 30%;
+                }
+
+                @media (max-width: 450px) {
+                    width: 40%;
+                }
+
+                .nav-sign-btn {
+                    padding: 2px 8px 2px 8px;
+                    border: 1px solid #000;
+                    border-radius: 3px;
+                    background: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 13px;
+                    cursor: pointer;
+                    transition: .2s;
+                }
+
+                .nav-basket {
+                    position: relative;
+
+                    .nav-b-count {
+                        position: absolute;
+                        width: 18px;
+                        height: 18px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        background-color: red;
+                        color: #fff;
+                        top: -15px;
+                        right: -8px;
+                    }
+                }
+
+                .nav-sign-btn:hover {
+                    color: gray;
+                    border: 1px solid gray;
+                }
+
+                .nav-icon {
+                    font-size: 20px;
+                    cursor: pointer;
                 }
             }
         }
 
-        .navbar-user {
+        .links {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: space-around;
 
-            .nav-us-img {
-                width: 60px;
-                border-radius: 20px;
-                overflow: hidden;
-                cursor: pointer;
+            @media(max-width: 450px) {
+                display: flex;
+                gap: 30px;
+                flex-wrap: wrap;
+            }
+
+            .default {
+                color: #000;
+                padding: 2px 5px 2px 5px;
+                transition: .3s;
+            }
+
+            .default:hover {
+                color: gray;
+                border: 1px solid gray;
+                border-radius: 3px;
+            }
+
+            .click {
+                color: gray;
+                border: 1px solid gray;
+                border-radius: 3px;
+                padding: 2px 5px 2px 5px;
             }
         }
     }
-
 }
