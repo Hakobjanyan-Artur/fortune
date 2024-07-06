@@ -25,7 +25,9 @@ img {
 
 
 @import './scss/variables';
+@import './pages/homeWrapper';
 @import './scss/_mixin';
 @import './components/navbar/_navbar';
+@import './components/footer/_footer';
 @import './components/login/_login';
 @import './components/reg/_reg';

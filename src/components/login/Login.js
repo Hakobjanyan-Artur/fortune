@@ -15,7 +15,7 @@ export default function Login() {
                     <div className='login-form-left'>
                         <img src={image} alt="" />
                     </div>
-                    <div className='login-from-right'>
+                    <div className='login-form-right'>
                         <form>
                             <h2>Вход в учетную запитсь</h2>
                             <div className='form-inp'>

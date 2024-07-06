@@ -1,0 +1,146 @@
+.reg {
+    min-height: 100vh;
+    @include font();
+    padding: 50px 0 50px 0;
+
+    .reg-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reg-form {
+        display: flex;
+        gap: 10px;
+        box-shadow: 0 0 10px #000;
+        border-radius: 10px;
+        overflow: hidden;
+        min-height: 400px;
+
+        @media (max-width: 700px) {
+            width: 90%;
+            flex-direction: column;
+        }
+
+        .reg-form-left {
+            max-width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media(max-width: 700px) {
+                max-width: 100%;
+            }
+        }
+
+        .reg-form-right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            padding: 30px 0 30px 0;
+
+            @media(max-width: 700px) {
+                width: 100%;
+                gap: 30px;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                width: 100%;
+                height: 100%;
+
+                .form-inp {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 70%;
+                    position: relative;
+
+                    span {
+                        position: absolute;
+                        right: 0;
+                        top: -5px;
+                        font-size: 18px;
+                        color: red;
+                    }
+
+                    .regTel {
+                        display: block;
+                        width: 16px;
+                        height: 16px;
+                        position: absolute;
+                        left: -20px;
+                        font-size: 16px;
+                        color: #000;
+                        top: 5px;
+                    }
+
+                    .inp-pass {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+
+                        .icon-pass {
+                            position: absolute;
+                            right: -20px;
+                            top: 3px;
+                            font-size: 18px;
+                            cursor: pointer;
+                        }
+                    }
+
+                    input {
+                        width: 100%;
+                        height: 25px;
+                        border: none;
+                        background: none;
+                        border-bottom: 1px solid #000;
+                        outline: none;
+                        padding-left: 5px;
+                        font-size: 14px;
+                    }
+                }
+
+                .form-inp-pass {
+                    cursor: pointer;
+                    transition: .3s;
+                }
+
+                .form-inp-pass:hover {
+                    color: gray;
+                }
+
+                button {
+                    padding: 5px 10px 5px 10px;
+                    border: 1px solid #000;
+                    border-radius: 3px;
+                    background: none;
+                    cursor: pointer;
+                    font-size: 16px;
+                    transition: .3s;
+                }
+
+                button:hover {
+                    border: 1px solid grey;
+                    color: gray;
+                }
+            }
+
+            .login-reg {
+                color: red;
+                cursor: pointer;
+            }
+        }
+    }
+}

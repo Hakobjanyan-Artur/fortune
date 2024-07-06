@@ -1,6 +1,7 @@
 import { NavLink, useNavigate } from 'react-router-dom'
 import logo from '../../images/logo.png'
 import { CiSearch, CiShoppingBasket } from "react-icons/ci";
+import { SlBasket } from "react-icons/sl";
 import { IoMdCloseCircle } from "react-icons/io";
 import { useState } from 'react';
 
@@ -49,20 +50,22 @@ export default function Navbar() {
                         <div
                             onClick={() => navigate('basket')}
                             className='nav-basket'>
-                            <div className='nav-b-count'>0</div>
-                            <CiShoppingBasket className='nav-icon' />
+                            <SlBasket className='nav-icon' />
+                            <div className='nav-b-count'>
+                                <span>Карзина</span><span>(0)</span>
+                            </div>
                         </div>
                         <CiSearch
                             onClick={() => setSearch(true)}
                             className='nav-icon' />
                     </div>
                 </div>
-                <div className='links'>
-                    <div><NavLink className={({ isActive }) => isActive ? 'click' : 'default'} to={'/men'}><span>Мужчинам</span></NavLink></div>
-                    <div><NavLink className={({ isActive }) => isActive ? 'click' : 'default'} to={'/women'}><span>Женщинам</span></NavLink></div>
-                    <div><NavLink className={({ isActive }) => isActive ? 'click' : 'default'} to={'/girls'}><span>Девочкам</span></NavLink></div>
-                    <div><NavLink className={({ isActive }) => isActive ? 'click' : 'default'} to={'/boys'}><span>Мальчикам</span></NavLink></div>
-                </div>
+            </div>
+            <div className='links'>
+                <div><NavLink className={({ isActive }) => isActive ? 'click' : 'default'} to={'/men'}><span>Мужчинам</span></NavLink></div>
+                <div><NavLink className={({ isActive }) => isActive ? 'click' : 'default'} to={'/women'}><span>Женщинам</span></NavLink></div>
+                <div><NavLink className={({ isActive }) => isActive ? 'click' : 'default'} to={'/girls'}><span>Девочкам</span></NavLink></div>
+                <div><NavLink className={({ isActive }) => isActive ? 'click' : 'default'} to={'/boys'}><span>Мальчикам</span></NavLink></div>
             </div>
         </div>
     )

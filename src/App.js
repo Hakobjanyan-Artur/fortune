@@ -16,10 +16,10 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path='reg' element={<Reg />} />
         <Route path='/' element={<HomeWrapper />}>
           <Route index element={<Main />} />
           <Route path='login' element={<Login />} />
+          <Route path='reg' element={<Reg />} />
           <Route path='men' element={<Men />} />
           <Route path='women' element={<Women />} />
           <Route path='girls' element={<Girls />} />
